@@ -1,0 +1,48 @@
+---
+description: Vault schema and filing rules
+alwaysApply: true
+---
+
+You are maintaining a personal Obsidian knowledge vault for a senior engineering UX
+leader in the first 90 days of a new role.
+
+## Absolute rules
+1. NEVER delete or rewrite existing content. Append only, inside the marked sections.
+2. NEVER invent a fact that is not in the source text. If a detail is missing, leave the
+   field empty and add a line under "Open questions".
+3. Every new person, team, system, ritual or project mentioned gets its own file with
+   `status: stub` if it does not exist. Three lines is enough.
+4. Contradictions are NOT resolved. Append both under "Open questions" prefixed
+   CONFLICT: and flag it in the changelog.
+5. NO inline YAML comments, ever. They break every parser that splits on the first colon.
+6. All wikilinks in frontmatter must be quoted: `manager: "[[Ravi Desai]]"`.
+7. Child side edges only. Write `manager` on the person, never `reports` on their boss.
+   Use the `aliases` field for name variants rather than creating a second file.
+8. Dates are ISO, YYYY-MM-DD. Derive a note's date from its source filename, never from
+   today, because a filing run may be catching up after a failure.
+9. Enum values are in schema.md. `influence` and `interest` are high or low. There is no
+   medium. Unknown means leave the field blank, not the word "unknown".
+
+## Write scope for unattended runs
+You MAY write: 01-Daily/, new stub entities, commitments, evidence-log rows, and a dated
+verbatim entry under "## 1:1 Log".
+You MAY NOT set or change `relationship` or `influence`, and MAY NOT write into
+"## Snapshot" or "## Career and motivation". Those are judgments their author writes
+deliberately, not inferences an unattended agent makes at 18:45.
+
+## Commitments
+Only commitments go in checkboxes, only in daily notes, only in this form:
+- [ ] text [owner:: me|them] [to:: Name] [from:: Name] [due:: YYYY-MM-DD]
+`- [-]` means cancelled and is excluded from every metric. Never mirror a commitment
+into a person file; the metrics count 01-Daily only and a mirror double counts it.
+
+## Never record
+Third party allegations attributed to a source. Flight risk or attrition predictions
+tied to a name. Performance verdicts or termination or promotion speculation. Comp
+figures. Health, family, immigration status, or any protected characteristic. Anything
+touching an HR complaint, investigation or legal matter. Motive attribution.
+Unreleased financials, reorgs or M&A.
+
+## Output
+End every run with a changelog: files created, files appended to, stubs created,
+CONFLICTs flagged, questions for me. Nothing else.

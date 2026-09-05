@@ -1,0 +1,16 @@
+# Derived or raw. Nothing here belongs in history.
+09-Dashboards/coach-local.md
+09-Dashboards/stakeholder-map.html
+09-Dashboards/coach-metrics.*
+00-Inbox/archive/
+00-Inbox/run/
+99-Meta/logs/
+
+# Obsidian local state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# OS
+.DS_Store
