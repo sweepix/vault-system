@@ -18,6 +18,7 @@ cp "$SRC"/schema.md           "$V"/99-Meta/schema.md
 cp "$SRC"/cursor/vault.mdc    "$V"/.cursor/rules/vault.mdc
 cp "$SRC"/.gitignore          "$V"/.gitignore
 cp "$SRC"/.gitattributes      "$V"/.gitattributes
+cp "$SRC"/cursorignore.template "$V"/.cursorignore
 chmod +x "$V"/99-Meta/scripts/nightly.sh
 
 new() { [ -f "$V/$1" ] || { cat > "$V/$1"; echo "  created $1"; } }
