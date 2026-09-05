@@ -1,0 +1,5 @@
+{
+  "name": "vault-system",
+  "user": "ubuntu",
+  "install": "python3 --version && PYTHONPYCACHEPREFIX=/tmp/vault-pycache python3 -m py_compile scripts/coach_metrics.py scripts/stakeholder_map.py && bash -n install.sh scripts/nightly.sh && echo 'vault-system ready: stdlib-only Python + bash, no third-party dependencies'"
+}
